@@ -29,11 +29,6 @@ int main() {
 
 void readDataFromFile(string filename, vector<Runner>& runners) {
     ifstream inputFile(filename);
-    if (!inputFile.is_open()) {
-        cerr << "Error: Unable to open input file." << endl;
-        exit(EXIT_FAILURE);
-    }
-
     Runner runner;
     while (inputFile >> runner.name) {
         for (int i = 0; i < numd; ++i) {
